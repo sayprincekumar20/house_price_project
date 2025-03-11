@@ -4,15 +4,15 @@ This repository contains a House Price Prediction web application built using th
 
 The project is fully containerized with Docker and deployed on Render for live hosting.
 
-🚀 Features
+   🚀 Features
 
-* Machine Learning Model: Predicts house prices based on input features.
+   * Machine Learning Model: Predicts house prices based on input features.
 
-* Django Framework: Backend developed using Python and Django.
+   * Django Framework: Backend developed using Python and Django.
 
-REST API: Provides endpoints for fetching predictions.
+   * REST API: Provides endpoints for fetching predictions.
 
-Docker Support: Easily deployable using Docker.
+   * Docker Support: Easily deployable using Docker.
 
 Live Deployment: Hosted on Render.
 
