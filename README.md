@@ -14,7 +14,7 @@ The project is fully containerized with Docker and deployed on Render for live h
 
    * Docker Support: Easily deployable using Docker.
 
-Live Deployment: Hosted on Render.
+   * Live Deployment: Hosted on Render.
 
 📂 Project Structure
 
@@ -29,20 +29,20 @@ Live Deployment: Hosted on Render.
 ├── manage.py             # Django Management Script
 └── README.md             # Project Documentation
 
-🛠️ Installation & Setup
+ ### 🛠️ Installation & Setup
 
-Prerequisites
+#### Prerequisites
 
-Python 3.x
+   * Python 3.x
 
-Docker (optional for containerization)
+   * Docker (optional for containerization)
 
-Render account (for deployment)
+   * Render account (for deployment)
 
 1️⃣ Clone the Repository
 
-git clone https://github.com/your-username/house-price-prediction.git
-cd house-price-prediction
+** git clone https://github.com/your-username/house-price-prediction.git
+cd house-price-prediction **
 
 2️⃣ Install Dependencies
 
