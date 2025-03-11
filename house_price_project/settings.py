@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    'house-price-project.onrender.com'  # Add your Render domain here
+    'house-price-project.onrender.com'  
 ]
 
 
@@ -85,6 +85,10 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://house-price-project.onrender.com'
+]
 
 
 # Password validation
