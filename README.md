@@ -1,91 +1,89 @@
-### House Price Prediction Website
+# Django Website with Docker and Render Deployment
 
-This repository contains a House Price Prediction web application built using the Django framework. The application allows users to input features of a house and get a predicted price using a Machine Learning model.
+This is a web application built using the Django framework. The project includes Docker integration and has been successfully deployed on the Render platform for live access.
 
-The project is fully containerized with Docker and deployed on Render for live hosting.
+## Features
 
-   🚀 Features
+- **Django-based Web Application**: Built with the Django framework to ensure scalability and performance.
+- **Docker Integration**: The project is containerized using Docker for seamless deployment.
+- **Render Deployment**: Hosted on Render, making the website accessible online.
+- **Database Support**: Configured with PostgreSQL/MySQL (mention if applicable).
+- **Authentication System**: User authentication and authorization features.
+- **Responsive UI**: Designed with Tailwind CSS or Bootstrap (mention if applicable).
+- **REST API**: Built with Django REST Framework (if applicable).
 
-   * Machine Learning Model: Predicts house prices based on input features.
+## Live Demo
 
-   * Django Framework: Backend developed using Python and Django.
+🔗 [Live Website](your_render_live_link_here)
 
-   * REST API: Provides endpoints for fetching predictions.
+## Installation and Setup
 
-   * Docker Support: Easily deployable using Docker.
+### Prerequisites
 
-   * Live Deployment: Hosted on Render.
+Ensure you have the following installed on your system:
+- Python (>= 3.8)
+- Django (>= 4.0)
+- Docker (if using containerization)
+- PostgreSQL/MySQL (if applicable)
+- Git
 
-📂 Project Structure
+### Clone the Repository
+```bash
+git clone https://github.com/your-github-username/your-repo-name.git
+cd your-repo-name
+```
 
-├── app/                  # Django Application
-│   ├── models.py         # ML Model Integration
-│   ├── views.py          # API and Web View Handling
-│   ├── urls.py           # URL Routing
-│   ├── templates/        # Frontend Templates
-│   ├── static/           # CSS, JS, Images
-├── Dockerfile            # Docker Configuration
-├── requirements.txt      # Python Dependencies
-├── manage.py             # Django Management Script
-└── README.md             # Project Documentation
-
- ### 🛠️ Installation & Setup
-
-#### Prerequisites
-
-   * Python 3.x
-
-   * Docker (optional for containerization)
-
-   * Render account (for deployment)
-
-1️⃣ Clone the Repository
-
-** git clone https://github.com/your-username/house-price-prediction.git
-cd house-price-prediction **
-
-2️⃣ Install Dependencies
-
+### Install Dependencies
+Create a virtual environment and install dependencies:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 pip install -r requirements.txt
+```
 
-3️⃣ Run Migrations
+### Configure Environment Variables
+Create a `.env` file in the root directory and configure the necessary environment variables:
+```
+SECRET_KEY=your_secret_key
+DEBUG=True
+DATABASE_URL=your_database_url
+ALLOWED_HOSTS=your_domain_or_localhost
+```
 
+### Apply Migrations
+```bash
 python manage.py migrate
+```
 
-4️⃣ Start the Django Server
-
+### Run the Development Server
+```bash
 python manage.py runserver
+```
+Visit `http://127.0.0.1:8000/` to view the site.
 
-Visit http://127.0.0.1:8000/ in your browser.
+## Docker Setup
 
-🐳 Running with Docker
+### Build and Run the Container
+```bash
+docker build -t your-app-name .
+docker run -p 8000:8000 your-app-name
+```
 
-Build and run the Docker container:
+## Deployment on Render
 
-docker build -t house-price-app .
-docker run -p 8000:8000 house-price-app
+### Steps to Deploy
+1. Push your code to a GitHub repository.
+2. Create a new web service on Render.
+3. Connect it to your GitHub repository.
+4. Set up environment variables in the Render dashboard.
+5. Deploy the application.
 
-🌍 Deployment on Render
+## Contributing
+If you'd like to contribute, please fork the repository and submit a pull request.
 
-This application is deployed on Render for live access. Follow these steps to deploy:
-
-Push your code to a GitHub repository.
-
-Create a new Web Service on Render.
-
-Connect your GitHub repository.
-
-Set up Python environment and necessary build commands.
-
-Deploy the application and access it via the live URL.
-
-📝 License
-
+## License
 This project is licensed under the MIT License.
 
-📧 Contact
+---
 
-For queries or contributions, feel free to reach out!
-
-Happy coding! 🚀
-
+For any queries, feel free to reach out! 🚀
