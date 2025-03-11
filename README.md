@@ -29,7 +29,7 @@ Ensure you have the following installed on your system:
 
 ### Clone the Repository
 ```bash
-git clone https://github.com/your-github-username/your-repo-name.git
+git clone https://github.com/your-github-username/house-price-predictor.git
 cd your-repo-name
 ```
 
@@ -65,8 +65,8 @@ Visit `http://127.0.0.1:8000/` to view the site.
 
 ### Build and Run the Container
 ```bash
-docker build -t your-app-name .
-docker run -p 8000:8000 your-app-name
+docker build -t house-price-predictor .
+docker run -p 8000:8000 house-price-predictor
 ```
 
 ## Deployment on Render
