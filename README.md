@@ -66,7 +66,7 @@ Visit `http://127.0.0.1:8000/` to view the site.
 ### Build and Run the Container
 ```bash
 docker build -t house-price-predictor .
-docker run -p 8000:8000 house-price-predictor
+docker run -p 8000:8000 house-price-project
 ```
 
 ## Deployment on Render
