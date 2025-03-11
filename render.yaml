@@ -1,0 +1,10 @@
+services:
+  - name: house-price-predictor
+    type: web
+    runtime: python
+    plan: free
+    envVars:
+      - key: PORT
+        value: 8000
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"

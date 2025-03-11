@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">House Price Prediction</h2>
+
+        <form method="post" class="row g-3">
+            {% csrf_token %}
+
+            <!-- Numeric Input Fields -->
+            {% for feature in numeric_features %}
+            <div class="col-md-4">
+                <label class="form-label">{{ feature|capfirst }}</label>
+                <input type="number" step="any" name="{{ feature }}" class="form-control" required>
+            </div>
+            {% endfor %}
+
+            <!-- Binary Categorical Inputs -->
+            {% for feature in categorical_binary %}
+            <div class="col-md-4">
+                <label class="form-label">{{ feature|capfirst }}</label>
+                <select name="{{ feature }}" class="form-control">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            {% endfor %}
+
+            <!-- Furnishing Options (One-Hot Encoding) -->
+            <div class="col-md-12">
+                <label class="form-label">Furnishing Type</label>
+                <select name="furnishing" class="form-control">
+                    {% for option in furnishing_options %}
+                    <option value="{{ option }}">{{ option|capfirst }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary">Predict</button>
+            </div>
+        </form>
+
+        {% if prediction is not None %}
+        <div class="mt-4 p-3 text-center alert alert-success">
+            <h4>Predicted House Price: ${{ prediction }}</h4>
+        </div>
+        {% endif %}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
